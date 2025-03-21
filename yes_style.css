@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(100, 145, 109);
+}
+
+.header_text {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.firework{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.main_gif, .firework {
+    opacity: 0; /* İlk başta görünmez */
+    animation: fadeIn 0.5s ease-in forwards; /* Yüklenince görünür olacak */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
