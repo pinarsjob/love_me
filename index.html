@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betüş Peri</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="continer">
+
+        <div>
+            <h1 class="header_text">SENİ ÇOK SEVİYORUM AŞKOO!</h1>
+            <h1 class="header_text">SEN DE BENİ SEVİYOR MUSUN, BAKALIM?</h1>
+        </div>
+        <div>
+            <div class="gif_container">
+                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class="buttons">
+                <button class="btn" id="yesBtn" onclick="nextPage()">Evet</button>
+                <button class="btn" id="noBtn" onmouseover="moveButton()" onclick="moveButton">Hayır</button>
+                <script>
+
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+
+                    function moveButton() {
+                        var button = document.getElementById('noBtn');
+            
+            var maxX = window.innerWidth - button.offsetWidth;
+            var maxY = window.innerHeight - button.offsetHeight;
+
+            var x = Math.random() * maxX;
+            var y = Math.random() * maxY;
+
+            button.style.position = "absolute";  // Butonun hareket edebilmesi için
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+                    }
+
+                </script>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
